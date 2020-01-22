@@ -102,15 +102,12 @@ variable "log_options" {
 }
 
 variable "mount_points" {
-  type        = list(string)
   description = "Container mount points. This is a list of maps, where each map should contain a `containerPath` and `sourceVolume`"
-  default     = []
-  #default     = [
-  #  {
-  #    containerPath  = "/tmp"
-  #    sourceVolume = "test-volume"
-  #  }
-  #]
+  type = list(object({
+    containerPath = string
+    sourceVolume  = string
+  }))
+  default = []
 }
 
 variable "dns_servers" {
