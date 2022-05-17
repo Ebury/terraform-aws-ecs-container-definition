@@ -22,6 +22,7 @@ locals {
     stopTimeout            = "stop_timeout_sentinel_value"
     portMappings           = var.port_mappings
     healthCheck            = var.healthcheck
+    placementConstraints   = var.placement_constraints
     logConfiguration = {
       logDriver = var.log_driver
       options   = var.log_options
