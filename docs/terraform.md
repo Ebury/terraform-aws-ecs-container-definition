@@ -27,6 +27,7 @@
 | user | The user to run as inside the container. Can be any of these formats: user, user:group, uid, uid:gid, user:gid, uid:group | string | `` | no |
 | volumes_from | A list of VolumesFrom maps which contain "sourceContainer" (name of the container that has the volumes to mount) and "readOnly" (whether the container can write to the volume). | list | `<list>` | no |
 | working_directory | The working directory to run commands inside the container | string | `` | no |
+| placement_constraints | Adds contraints to the container to limit where it can be scheduled | `<list>` | `` | no |
 
 ## Outputs
 

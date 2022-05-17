@@ -163,3 +163,8 @@ variable "stop_timeout" {
   default     = 30
 }
 
+variable "placement_constraints" {
+  type        = list(map(string))
+  description = "Adds contraints to the container to limit where it can be scheduled"
+  default     = []
+}
