@@ -27,8 +27,9 @@ locals {
       logDriver = var.log_driver
       options   = var.log_options
     }
-    environment = "environment_sentinel_value"
-    secrets     = "secrets_sentinel_value"
+    environment  = "environment_sentinel_value"
+    secrets      = "secrets_sentinel_value"
+    dockerLabels = "docker_labels_sentinel_value"
   }
 
   environment = var.environment
