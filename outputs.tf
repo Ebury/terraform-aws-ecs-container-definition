@@ -62,7 +62,7 @@ locals {
     local.encoded_docker_labels,
   )
 
-  json_map = "${local.json_with_docker_labels}"
+  json_map = local.json_with_docker_labels
 }
 
 output "json" {
