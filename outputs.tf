@@ -24,7 +24,7 @@ locals {
     "/\"(-?[0-9]+\\.?[0-9]*)\"/",
     "$1",
   )
-  encoded_docker_labels         = "${jsonencode(var.docker_labels)}"
+  encoded_docker_labels         = jsonencode(var.docker_labels)
 
   json_with_environment = replace(
     local.encoded_container_definition,
